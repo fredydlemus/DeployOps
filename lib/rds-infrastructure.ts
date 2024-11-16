@@ -1,11 +1,10 @@
-import * as cdk from '@aws-cdk/core';
-import * as ec2 from '@aws-cdk/aws-ec2';
-import * as rds from '@aws-cdk/aws-rds';
+import * as cdk from '@aws-cdk/core'
+import * as ec2 from '@aws-cdk/aws-ec2'
+import * as rds from '@aws-cdk/aws-rds'
 import * as secretsmanager from '@aws-cdk/aws-secretsmanager';
 import * as ssm from '@aws-cdk/aws-ssm'
+import { ISecurityGroup, IVpc } from '@aws-cdk/aws-ec2';
 import { Secret } from '@aws-cdk/aws-secretsmanager';
-import { ISecurityGroup, IVpc } from 'aws-cdk-lib/aws-ec2';
-
 interface RdsStackProps extends cdk.StackProps{
     myVpc: ec2.IVpc;
     rdsSecurityGroup: ec2.ISecurityGroup;
